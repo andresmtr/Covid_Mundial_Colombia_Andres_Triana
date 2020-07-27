@@ -1,0 +1,30 @@
+.sidebar{
+    background: #04344c;
+    text-align: center;
+    width: 35%;
+    margin-left: 2%;
+    border-radius: 68px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 2px 0 36px 0;
+    max-height: 850px;
+    overflow-y: auto;
+    -webkit-box-shadow: 0px 9px 34px -1px rgba(0,0,0,0.59);
+    -moz-box-shadow: 0px 9px 34px -1px rgba(0,0,0,0.59);
+    box-shadow: 0px 9px 34px -1px rgba(0,0,0,0.59);
+}
+
+.sidebar img {
+    width: 90%;
+    margin-bottom: 250px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.twitter-timeline{
+
+}
+

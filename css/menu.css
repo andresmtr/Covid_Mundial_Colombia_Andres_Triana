@@ -1,0 +1,43 @@
+.menu{
+	background: #026698;
+    position: absolute;
+    width: 90%;
+    height: 9%;
+    margin: center;
+    margin: auto;
+    left: 5%;
+    top: 29%;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 9px 34px -1px rgba(0,0,0,0.59);
+	-moz-box-shadow: 0px 9px 34px -1px rgba(0,0,0,0.59);
+	box-shadow: 0px 9px 34px -1px rgba(0,0,0,0.59);
+}
+
+.menu ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+
+.menu ul li{
+	background: #05547b;
+    width: 13%;
+    margin-top: 15px;
+    display: inline-block;
+    height: 52%;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    font-family: candara;
+    font-size: 20px;
+    text-align: center;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.menu ul li:hover{
+	cursor:pointer;
+	box-shadow: 0px 9px 34px -1px rgba(0,0,0,0.59);
+}
