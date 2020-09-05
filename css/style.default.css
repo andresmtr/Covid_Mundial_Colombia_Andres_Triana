@@ -107,7 +107,8 @@ table {
 
 h2 {
   color: #555;
-  font-weight: 400;
+  font-weight: 150;
+  align-content: center;
 }
 
 .breadcrumb-holder {
@@ -1761,8 +1762,8 @@ STYLE SWITCHER FOR DEMO
   color: #495057;
 }
 
-/* ========================================= 
-   THEMING OF BOOTSTRAP COMPONENTS           
+/* =========================================
+   THEMING OF BOOTSTRAP COMPONENTS
    ========================================= */
 /*
  * 1. NAVBAR
@@ -2447,7 +2448,7 @@ STYLE SWITCHER FOR DEMO
 }
 
 /*
- * 3. TYPE  
+ * 3. TYPE
  */
 body {
   font-family: "Roboto", sans-serif;
@@ -3123,3 +3124,24 @@ a > code {
     margin-left: 15px;
   }
 }
+
+/* =========================================
+   Responsive iframe
+   ========================================= */
+   .container-graph {
+     position: center;
+     overflow: hidden;
+     width: 100%;
+     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+   }
+
+   /* Then style the iframe to fit in the container div with full height and width */
+   .responsive-iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+   }
