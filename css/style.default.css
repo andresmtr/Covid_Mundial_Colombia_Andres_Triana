@@ -3128,10 +3128,11 @@ a > code {
 /* =========================================
    Responsive iframe
    ========================================= */
+
    .container-graph {
      position: center;
      overflow: hidden;
-     width: 100%;
+     width: 80%;
      padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
    }
 
