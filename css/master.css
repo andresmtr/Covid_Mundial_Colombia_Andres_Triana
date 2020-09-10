@@ -1,0 +1,113 @@
+body {
+  font-family: 'IsabellaSansRegular';
+  font-style: normal;
+}
+
+.title_form {
+  color: white;
+  font-size: 1.5em;
+  font-family: 'IsabellaSansRegular';
+  font-style: normal;
+}
+
+/* Palabra del encabezado */
+#tit {
+  color: #BDBDBD;
+}
+
+/* Primara parte del cuerpo del proyecto */
+
+.body_part1 {
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+nav a:hover, nav a:active {
+
+background:#55629D; /*cambia el color cuando pasas el mouse*/
+color:#ffffff;
+font-family: 'IsabellaSansRegular';
+font-style: normal;
+}
+
+h1 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  font-size: 21px;
+  font-family: 'IsabellaSansRegular';
+  font-weight: 200px;
+  font-style: normal;
+}
+
+h2 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  font-family: 'IsabellaSansRegular';
+  font-weight: 200px;
+  font-style: normal;
+}
+
+h3 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  font-family: 'IsabellaSansRegular';
+  font-weight: 200px;
+  font-style: normal;
+}
+
+p {
+  text-align: justify;
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'IsabellaSansRegular';
+  font-weight: 200px;
+  font-style: normal;
+}
+
+.List-index {
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'IsabellaSansRegular';
+  font-weight: 200px;
+  font-style: normal;
+  width: 70%;
+}
+
+li {
+  text-align: left;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+#footer_word {
+  color: white;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  font-size: 0.9em;
+}
+
+.graph {
+  margin: auto;
+  text-align: center;
+}
+
+#li_contened {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.ol_cont {
+  text-align: left;
+  margin: auto;
+  width: 80%;
+}
