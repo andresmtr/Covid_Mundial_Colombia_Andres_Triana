@@ -47,6 +47,7 @@ df ['Year - Month'] = df ['Year'] + '-' + df ['Month']
 #### Fecha
 
 yesterday = date.today()-timedelta(days=1)
+#yesterday = date.today()
 fecha = yesterday.strftime("%Y-%m-%d")
 
 #today = date.today()
@@ -276,15 +277,15 @@ fecha2 = Today.strftime("%Y-%m-%d")
 otro = df['date'] == fecha2
 otro2 = df[otro]
 
-with_world = otro2['location'] != 'World'
-actual = otro2[with_world]
+Only_world1 = otro2['location'] == 'World'
+Only_world2 = otro2[Only_world1]
 
+#Contagi = actual['total_cases'].sum()
+Contagi = Only_world2['total_cases'].sum()
 
-Contagi = actual['total_cases'].sum()
+Total_deaths = Only_world2['total_deaths'].sum()
 
-Total_deaths = actual['total_deaths'].sum()
-
-total_res_wor = pd.DataFrame({'Contagiados': [Contagi],'Fallecidos': [Total_deaths], 'Fecha':[fecha]})
+total_res_wor = pd.DataFrame({'Contagiados': [Contagi],'Fallecidos': [Total_deaths], 'Fecha':[fecha2]})
 
 fig1 = go.Figure(data=[go.Table(
     header=dict(values=list(total_res_wor.columns),
@@ -302,6 +303,7 @@ fig1 = go.Figure(data=[go.Table(
 figures_to_html([fig1])
 
 yesterday = date.today()-timedelta(days=1)
+#yesterday = date.today()
 fecha = yesterday.strftime("%Y-%m-%d")
 
 otro = df['date'] == fecha
