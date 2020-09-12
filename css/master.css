@@ -3,6 +3,10 @@ body {
   font-style: normal;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 .title_form {
   color: white;
   font-size: 1.5em;
@@ -17,19 +21,12 @@ body {
 
 /* Primara parte del cuerpo del proyecto */
 
-.body_part1 {
-  border: 1px solid black;
-  width: 100%;
-  text-align: center;
-  margin: auto;
-}
-
 nav a:hover, nav a:active {
 
-background:#55629D; /*cambia el color cuando pasas el mouse*/
-color:#ffffff;
-font-family: 'IsabellaSansRegular';
-font-style: normal;
+  background:#1C5552; /*cambia el color cuando pasas el mouse*/
+  color:#ffffff;
+  font-family: 'IsabellaSansRegular';
+  font-style: normal;
 }
 
 h1 {
@@ -60,6 +57,19 @@ h3 {
   font-style: normal;
 }
 
+h4 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  font-family: 'IsabellaSansRegular';
+  font-weight: 200px;
+  font-style: normal;
+}
+
+#color_h4 {
+  color: #406563;
+}
+
 p {
   text-align: justify;
   width: 80%;
@@ -70,14 +80,14 @@ p {
   font-style: normal;
 }
 
-.List-index {
-  text-align: center;
+li {
+  text-align: justify;
+  width: 80%;
   margin: auto;
   font-size: 20px;
   font-family: 'IsabellaSansRegular';
   font-weight: 200px;
   font-style: normal;
-  width: 70%;
 }
 
 li {
@@ -85,7 +95,13 @@ li {
 }
 
 iframe {
-    max-width: 100%;
+  display:block;
+  margin:auto;
+}
+
+button {
+  display:block;
+  margin:auto;
 }
 
 #footer_word {
@@ -101,13 +117,15 @@ iframe {
   text-align: center;
 }
 
-#li_contened {
-  font-size: 1.6em;
-  font-weight: bold;
+img{
+  display:block;
+  margin:auto;
 }
 
-.ol_cont {
+.left_world {
   text-align: left;
-  margin: auto;
-  width: 80%;
+}
+
+.n_world {
+  font-weight: bold;
 }

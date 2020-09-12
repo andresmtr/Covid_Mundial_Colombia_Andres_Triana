@@ -18,21 +18,21 @@
   </head>
   <body>
     <!-- NAV -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar fixed-top">
-        <a class="title_form" href="index.html">Covid-19 <span id='tit'>Colombia y Mundial</span></a>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="title_form" href="index.html">COVID-19 <span id='tit'>Mundial</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+              <a href="index.html" class="nav-link">Inicio</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Colombia.html">Colombia</a>
+              <a href="Colombia.html" class="nav-link">Colombia</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="World.html">Mundo</a>
+              <a href="World.html" class="nav-link">Mundial</a>
             </li>
           </ul>
         </div>
@@ -41,86 +41,97 @@
       <br>
       <br>
       <!-- RESUMEN -->
+      
       <div class="jumbotron text-center">
-          <h1>Resumen contagios</h1>
-          <iframe width="780" height="280" src="World/Tabla_contagiados_fallecidos.html" scrolling="no" frameborder="no" align="center" ></iframe>
+          <h1>Resumen</h1>
+          <div>
+            <iframe width="580" height="280" src="World/Tabla_contagiados_fallecidos.html" scrolling="no" frameborder="no" align="center" ></iframe>
+          </div>
       </div>
+
       <!-- END RESUMEN -->
       <br>
       <!-- CONTENIDO -->
       <div class="container">
-        <h1>Analisis cuantitativo Mundial</h1>
-        <br>
-        <ol class="ol_cont">
-          <li id='li_contened'>Contagios</li>
-          <div class="graph">
-              <h3>Contagiados por fecha</h3>
-              <iframe width="880" height="480" src="World/Numero_contagios_fecha.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>Mapa contagiados en el mundo</h3>
-              <iframe width="880" height="580" src="World/Mapa_Mundo_contagios.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>20 paises con más contagios</h3>
-              <iframe width="880" height="480" src="World/20paisescontagios.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>Continente con más contagios</h3>
-              <iframe width="880" height="480" src="World/Continente_contagios.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>20 paises con más casos por millon</h3>
-              <iframe width="880" height="480" src="World/Cases_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>20 paises con nuevos casos por millon</h3>
-              <iframe width="880" height="480" src="World/New_cases_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-          </div>
-          <li id='li_contened'>Fallecidos</li>
-          <div class="graph">
-            <h3>Número de muertes por fecha</h3>
-              <iframe width="880" height="480" src="World/Numero_muertes_fecha.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>Mapa Muertes en el mundo</h3>
-              <iframe width="880" height="580" src="World/Mapa_Mundo_muertes.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>20 paises con más muertos</h3>
-              <iframe width="880" height="480" src="World/20paisesmuertes.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>Continente con más muertes</h3>
-              <iframe width="880" height="480" src="World/Continente_muertes.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>20 paises con más muertes por millon</h3>
-              <iframe width="880" height="480" src="World/deaths_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>20 paises con nuevas muertes por millon</h3>
-              <iframe width="880" height="480" src="World/New_deaths_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>Muertes relacionadas con extrema pobreza</h3>
-              <iframe width="880" height="480" src="World/deaths_extreme_poverty.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>Muertes relacionadas con problemas cardiovasculares</h3>
-              <iframe width="880" height="480" src="World/cardiovasc_death_rate.html" scrolling="no" frameborder="no" align="center" ></iframe>
-              <br>
-              <h3>Muertes relacionadas con de diabetes</h3>
-              <iframe width="880" height="480" src="World/diabetes_prevalence.html" scrolling="no" frameborder="no" align="center" ></iframe>
 
-          </div>
-          <li id='li_contened'>Refenrencia</li>
+        <h3 class="left_world">Contagios</h3><br>
+          <h4 id="color_h4" class="left_world">Contagiados por fecha</h4>
+            <iframe width="880" height="480" src="World/Numero_contagios_fecha.html" scrolling="no" frameborder="no" align="center" ></iframe>
             <br>
-            <div class="List-index">
-              <ol>
-                <li><a href="https://ourworldindata.org" target="_blank">Mundial - Our World in Data</a></li>
-              </ol>
-            </div>
-          </div>
-        </ol>
+
+          <h4 id="color_h4" class="left_world">Mapa contagiados en el mundo</h4>
+              <iframe width="880" height="580" src="World/Mapa_Mundo_contagios.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">20 paises con más contagios</h4>
+            <iframe width="880" height="480" src="World/20paisescontagios.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">Continente con más contagios</h4>
+            <iframe width="880" height="480" src="World/Continente_contagios.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">20 paises con más casos por millon</h4>
+            <iframe width="880" height="480" src="World/Cases_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">20 paises con nuevos casos por millon</h4>
+            <iframe width="880" height="480" src="World/New_cases_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+        <h3 class="left_world">Fallecidos</h3><br>
+          <h4 id="color_h4" class="left_world">Número de muertes por fecha</h4>
+            <iframe width="880" height="480" src="World/Numero_muertes_fecha.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">Mapa Muertes en el mundo</h4>
+            <iframe width="880" height="580" src="World/Mapa_Mundo_muertes.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">20 paises con más muertos</h4>
+            <iframe width="880" height="480" src="World/20paisesmuertes.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">Continente con más muertes</h4>
+            <iframe width="880" height="480" src="World/Continente_muertes.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">20 paises con más muertes por millon</h4>
+            <iframe width="880" height="480" src="World/deaths_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">20 paises con nuevas muertes por millon</h4>
+            <iframe width="880" height="480" src="World/New_deaths_per_millon.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">Muertes relacionadas con extrema pobreza</h4>
+            <iframe width="880" height="480" src="World/deaths_extreme_poverty.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">Muertes relacionadas con problemas cardiovasculares</h4>
+            <iframe width="880" height="480" src="World/cardiovasc_death_rate.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+
+          <h4 id="color_h4" class="left_world">Muertes relacionadas con de diabetes</h4>
+            <iframe width="880" height="480" src="World/diabetes_prevalence.html" scrolling="no" frameborder="no" align="center" ></iframe>
+            <br>
+        
+        <h3 class="left_world">Referencia</h3><br>
+        <div class="List-index">
+          <ul>
+            <li><a href="https://ourworldindata.org" target="_blank">Mundial - Our World in Data</a></li>
+          </ul>
+        </div>
+
+          
+      </div>
+      
       <!-- END CONTENIDO -->
       <br>
       <!-- FOOTER -->
-
       <footer class="bg-dark">
-        <p id = 'footer_word'>Design by Andrés Triana - 2020</p>
+        <p id='footer_word'>Design by Andrés Triana - 2020</p>
       </footer>
-
-
       <!-- END FOOTER -->
     </body>
 </html>

@@ -18,21 +18,21 @@
   </head>
   <body>
     <!-- NAV -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar fixed-top">
-        <a class="title_form" href="index.html">Covid-19 <span id='tit'>Colombia y Mundial</span></a>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="title_form" href="index.html">COVID-19 <span id='tit'>Resumen</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+              <a href="index.html" class="nav-link">Inicio</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="Colombia.html">Colombia</a>
+              <a href="Colombia.html" class="nav-link">Colombia</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="World.html">Mundo</a>
+              <a href="World.html" class="nav-link">Mundial</a>
             </li>
           </ul>
         </div>
@@ -41,16 +41,20 @@
       <br>
       <br>
       <!-- RESUMEN -->
+      
       <div class="jumbotron text-center">
-          <h1>Resumen contagios</h1>
-          <iframe width="780" height="280" src="World/Tabla_contagiados_fallecidos.html" scrolling="no" frameborder="no" align="center" ></iframe>
+          <h1>Resumen</h1>
+          <div>
+            <iframe width="580" height="280" src="World/Tabla_contagiados_fallecidos.html" scrolling="no" frameborder="no" align="center" ></iframe>
+          </div>
       </div>
+
       <!-- END RESUMEN -->
       <br>
       <!-- CONTENIDO -->
       <div class="container">
-        <p>Esta pagina contiene el analisis cuantitativo del COVID-19 en Colombia y el mundo</p>
 
+        <p>Esta pagina contiene el analisis cuantitativo del COVID-19 en Colombia y el mundo</p>
         <p>Referencias:</p>
 
         <div class="List-index">
@@ -59,17 +63,15 @@
             <li><a href="https://ourworldindata.org" target="_blank">Mundial - Our World in Data</a></li>
           </ol>
         </div>
-
+          
       </div>
+      
       <!-- END CONTENIDO -->
       <br>
       <!-- FOOTER -->
-
       <footer class="bg-dark">
         <p id='footer_word'>Design by Andrés Triana - 2020</p>
       </footer>
-
-
       <!-- END FOOTER -->
     </body>
 </html>
