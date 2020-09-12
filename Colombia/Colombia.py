@@ -455,6 +455,7 @@ fig1 = px.bar(Sexo,
 figures_to_html([fig1])
 
 
+
 def figures_to_html(figs, filename="Atención_contagiados.html"):
     Colombia_Covid = open(filename, 'w')
     Colombia_Covid.write("<html><head></head><body>" + "\n")
