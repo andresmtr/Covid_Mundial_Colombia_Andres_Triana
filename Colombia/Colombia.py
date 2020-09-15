@@ -449,7 +449,8 @@ def figures_to_html(figs, filename="Contagios_sexo.html"):
     
 fig1 = px.bar(Sexo, 
               x = 'Sexo', 
-              y = 'Numero') 
+              y = 'Numero',
+              labels = {'x':'sexo','y':'Número personas contagiadas'}) 
 
 
 figures_to_html([fig1])
@@ -468,7 +469,8 @@ def figures_to_html(figs, filename="Atención_contagiados.html"):
     
 fig1 = px.bar(Atención, 
               x = 'atención', 
-              y = 'Numero') 
+              y = 'Numero',
+              labels = {'x':'Atención','y':'Número de personas por atención'}) 
 
 
 figures_to_html([fig1])
@@ -504,7 +506,8 @@ def figures_to_html(figs, filename="Fallecidos_Sexo.html"):
     
 fig1 = px.bar(Sexo_fallecidos, 
               x = 'Sexo', 
-              y = 'Numero')
+              y = 'Numero',
+              labels = {'x':'Sexo','y':'Número de fallecidos'})
 
 
 figures_to_html([fig1])
@@ -616,7 +619,8 @@ def figures_to_html(figs, filename="Fecha_Contagio.html"):
     
 fig1 = px.line(Fecha, 
               x = 'Fecha identificación', 
-              y = 'Numero')
+              y = 'Numero',
+              labels = {'x':'Fecha de contagio','y':'Número de contagios'})
 
 
 figures_to_html([fig1])
@@ -635,7 +639,8 @@ def figures_to_html(figs, filename="Fecha_Contagio_sexo.html"):
 fig1 = px.line(Fecha_sexo, 
               x = 'Fecha identificación', 
               y = 'Numero',
-              color='Sexo')
+              color='Sexo',
+              labels = {'x':'Fecha de contagio','y':'Número de contagios por sexo'})
 
 
 figures_to_html([fig1])
@@ -655,7 +660,8 @@ def figures_to_html(figs, filename="Fecha_fallecidos.html"):
     
 fig1 = px.line(Fallecidos_Fecha, 
               x = 'Fecha de muerte f', 
-              y = 'Numero')
+              y = 'Numero',
+              labels = {'x':'Fecha de muertes','y':'Número de muertes'})
 
 
 figures_to_html([fig1])
@@ -674,7 +680,8 @@ def figures_to_html(figs, filename="Fecha_fallecidos_sexo.html"):
 fig1 = px.line(Fallecidos_Fecha_sexo, 
               x = 'Fecha de muerte f', 
               y = 'Numero',
-              color = 'Sexo')
+              color = 'Sexo',
+              labels = {'x':'Fecha de muertes','y':'Número de muertes'})
 
 
 figures_to_html([fig1])
@@ -738,7 +745,8 @@ def figures_to_html(figs, filename="Fallecidos_sexo_edad.html"):
 fig1 = px.scatter(Solo_fall_count, 
               x = 'Edad', 
               y = 'Numero',    
-              color = 'Sexo')
+              color = 'Sexo',
+              labels = {'x':'Edad','y':'Número de muertes por edad'})
 
 
 figures_to_html([fig1])
