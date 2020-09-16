@@ -615,13 +615,13 @@ locs2 = Suma_Solo_Fallecidos['Lugar']
 
 for loc in counties['features']:
     loc['id'] = loc['properties']['NOMBRE_DPT']
-fig1 = go.Figure(go.Choroplethmapbox(
+fig = go.Figure(go.Choroplethmapbox(
                     geojson=counties,
                     locations=locs2,
                     z=Suma_Solo_Fallecidos['Numero'],
                     colorscale='Viridis',
                     colorbar_title="Muertes"))
-fig1.update_layout(mapbox_style="carto-positron",
+fig.update_layout(mapbox_style="carto-positron",
                         mapbox_zoom=3.4,
                         mapbox_center = {"lat": 4.570868, "lon": -74.2973328})
 
@@ -710,7 +710,7 @@ total_Fall = pd.DataFrame({'Contagiados': [total],'Fallecidos': [muer3], 'Recupe
 total_Fall  
 
 
-fig1 = go.Figure(data=[go.Table(
+fig = go.Figure(data=[go.Table(
     header=dict(values=list(total_Fall.columns),
                 fill_color='rgba(15, 78, 64, 0.1)',
                 align='center'),
@@ -758,3 +758,52 @@ fig.update_layout(
 )
     
 pyo.plot(fig, filename = 'Fallecidos_sexo_edad.html')
+
+
+########################
+#### Fallecidos por sexo
+
+
+
+
+Fall_s = Solo_Fallecidos.pivot_table(index='Sexo', values='Numero',aggfunc='count').reset_index()
+
+Fall_Sexo_m = Fall_s[Fall_s['Sexo']=='Masculino']
+Fall_Sexo_f = Fall_s[Fall_s['Sexo']=='Femenino']
+
+fig = go.Figure()
+fig.add_trace(go.Bar(x=Fall_Sexo_m['Sexo'],
+                y=Fall_Sexo_m['Numero'],
+                name='Masculino',
+                marker_color='rgb(55, 83, 109)'
+                ))
+fig.add_trace(go.Bar(x=Fall_Sexo_f['Sexo'],
+                y=Fall_Sexo_f['Numero'],
+                name='Femenino',
+                marker_color='rgb(26, 118, 255)'
+                ))
+
+fig.update_traces(
+        texttemplate='%{y:.2s}', 
+        textposition='outside')
+
+fig.update_layout(
+    title='Fallcidos por Sexo',
+    xaxis_tickfont_size=14,
+    yaxis=dict(
+        title='Cantidad',
+        titlefont_size=16,
+        tickfont_size=14,
+    ),
+    legend=dict(
+        x=0.8,
+        y=1.1,
+        bgcolor='rgba(255, 255, 255, 0)',
+        bordercolor='rgba(255, 255, 255, 0)'
+    ),
+    barmode='group',
+    bargap=0.15, # gap between bars of adjacent location coordinates.
+    bargroupgap=0.1 # gap between bars of the same location coordinate.
+)
+
+pyo.plot(fig, filename = 'Fallecidos_Sexo.html')
