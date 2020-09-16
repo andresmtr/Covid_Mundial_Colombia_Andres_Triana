@@ -373,18 +373,15 @@ df['Lugar'].replace(
 
 #Sexo
 Sexo = df.pivot_table(index='Sexo', values='Numero',aggfunc='count').reset_index()
-#print (Sexo)
 #Atención contagiados
 Atención = df.pivot_table(index='atención', values='Numero',aggfunc='count').reset_index()
-#print (Atención)
 #Edad contagiados
 Edad = df.pivot_table(index='Edad', values='Numero',aggfunc='count').reset_index()
-#print (Edad)
-
+#Suma casos
 suma_casos_zona = df.groupby( ['Lugar'] ).sum().reset_index()
-
+#Fecha
 Fecha = df.groupby(['Fecha identificación']).count().reset_index()
-
+#Fecha sexo
 Fecha_sexo = df.groupby(['Fecha identificación', 'Sexo']).count().reset_index()
 
 
@@ -532,25 +529,6 @@ figures_to_html([fig1])
 
 
 
-def figures_to_html(figs, filename="Atencion_pacientes.html"):
-    Colombia_Covid = open(filename, 'w')
-    Colombia_Covid.write("<html><head></head><body>" + "\n")
-    for fig in figs:
-        inner_html = fig.to_html().split('<body>')[1].split('</body>')[0]
-        Colombia_Covid.write(inner_html)
-    Colombia_Covid.write("</body></html>" + "\n")
-    
-     
-    
-fig1 = px.pie(df, 
-              values='Numero', 
-              names='atención')
-
-
-figures_to_html([fig1])
-
-
-
 def figures_to_html(figs, filename="Mapa_Contagiados.html"):
     Colombia_Covid = open(filename, 'w')
     Colombia_Covid.write("<html><head></head><body>" + "\n")
@@ -646,45 +624,6 @@ fig1 = px.line(Fecha_sexo,
 figures_to_html([fig1])
 
 
-
-
-def figures_to_html(figs, filename="Fecha_fallecidos.html"):
-    Colombia_Covid = open(filename, 'w')
-    Colombia_Covid.write("<html><head></head><body>" + "\n")
-    for fig in figs:
-        inner_html = fig.to_html().split('<body>')[1].split('</body>')[0]
-        Colombia_Covid.write(inner_html)
-    Colombia_Covid.write("</body></html>" + "\n")
-    
-     
-    
-fig1 = px.line(Fallecidos_Fecha, 
-              x = 'Fecha de muerte f', 
-              y = 'Numero',
-              labels = {'x':'Fecha de muertes','y':'Número de muertes'})
-
-
-figures_to_html([fig1])
-
-
-def figures_to_html(figs, filename="Fecha_fallecidos_sexo.html"):
-    Colombia_Covid = open(filename, 'w')
-    Colombia_Covid.write("<html><head></head><body>" + "\n")
-    for fig in figs:
-        inner_html = fig.to_html().split('<body>')[1].split('</body>')[0]
-        Colombia_Covid.write(inner_html)
-    Colombia_Covid.write("</body></html>" + "\n")
-    
-     
-    
-fig1 = px.line(Fallecidos_Fecha_sexo, 
-              x = 'Fecha de muerte f', 
-              y = 'Numero',
-              color = 'Sexo',
-              labels = {'x':'Fecha de muertes','y':'Número de muertes'})
-
-
-figures_to_html([fig1])
 
 
 
