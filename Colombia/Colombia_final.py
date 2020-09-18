@@ -13,11 +13,11 @@ Created on Wed Sep 16 08:48:07 2020
 
 
 import pandas as pd
-import numpy as np
-import plotly.express as px
+#import numpy as np
+#import plotly.express as px
 import plotly.graph_objs as go
 import plotly.offline as pyo
-import time
+#import time
 from datetime import date, timedelta
 
 ######################################################
@@ -404,7 +404,6 @@ fig.update_traces(
         textposition='outside')
 
 fig.update_layout(
-    title='Contagios por Sexo',
     xaxis_tickfont_size=14,
     yaxis=dict(
         title='Cantidad',
@@ -472,7 +471,6 @@ fig.update_traces(
         textposition='outside')
 
 fig.update_layout(
-    title='Antención contagiados',
     xaxis_tickfont_size=14,
     yaxis=dict(
         title='Cantidad',
@@ -500,7 +498,6 @@ pyo.plot(fig, filename = 'Atención_contagiados.html')
 fig = go.Figure(data=[go.Histogram(x=df['Edad'], marker_color='rgb(55, 83, 109)')])
 
 fig.update_layout(
-    title='Edad contagiados',
     xaxis_tickfont_size=14,
     xaxis_title_text='Edad',
     yaxis=dict(
@@ -542,7 +539,6 @@ fig.update_traces(
         textposition='outside')
 
 fig.update_layout(
-    title='Fallecidos por Sexo',
     xaxis_tickfont_size=14,
     yaxis=dict(
         title='Cantidad',
@@ -571,7 +567,6 @@ pyo.plot(fig, filename = 'Fallecidos_edad.html')
 fig = go.Figure(data=[go.Histogram(x=Solo_Fallecidos['Edad'], marker_color='rgb(55, 83, 109)')])
 
 fig.update_layout(
-    title='Edad fallecidos',
     xaxis_tickfont_size=14,
     xaxis_title_text='Edad',
     yaxis=dict(
@@ -640,7 +635,6 @@ fig = go.Figure(data=go.Scatter(
         mode='lines+markers'))
 
 fig.update_layout(
-    title='Fecha contagios',
     xaxis_tickfont_size=14,
     xaxis_title_text='Fecha',
     yaxis=dict(
@@ -673,7 +667,6 @@ fig.add_trace(go.Scatter(x=Fecha_f['Fecha identificación'], y=Fecha_f['Numero']
 
 
 fig.update_layout(
-    title='Fecha contagios por sexo',
     xaxis_tickfont_size=14,
     xaxis_title_text='Fecha',
     yaxis=dict(
@@ -746,7 +739,6 @@ fig.add_trace(go.Scatter(x=Solo_fall_count_f['Edad'], y=Solo_fall_count_f['Numer
 
 
 fig.update_layout(
-    title='Fallecidos por sexo y edad',
     xaxis_tickfont_size=14,
     xaxis_title_text='Edad',
     yaxis=dict(
@@ -788,7 +780,6 @@ fig.update_traces(
         textposition='outside')
 
 fig.update_layout(
-    title='Fallcidos por Sexo',
     xaxis_tickfont_size=14,
     yaxis=dict(
         title='Cantidad',
