@@ -608,8 +608,8 @@ Suma_Solo_Fallecidos = Solo_Fallecidos.groupby( ['Lugar'] ).sum().reset_index()
 locs2 = Suma_Solo_Fallecidos['Lugar']
 
 
-for loc in counties['features']:
-    loc['id'] = loc['properties']['NOMBRE_DPT']
+#for loc in counties['features']:
+ #   loc['id'] = loc['properties']['NOMBRE_DPT']
 fig = go.Figure(go.Choroplethmapbox(
                     geojson=counties,
                     locations=locs2,
