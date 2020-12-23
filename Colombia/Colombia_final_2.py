@@ -56,7 +56,9 @@ df = pd.read_csv('/Users/andresmauriciotrianareina/Documents/Cursos_desarrollo/D
 #### crear fecha
 
 
-df ['Fecha identificación'] = df['fecha reporte web'].apply(lambda t: t.split(' ')[0])
+df ['Fecha identificación'] = df['fecha reporte web']
+
+#df ['Fecha identificación'] = df['fecha reporte web'].apply(lambda t: t.split(' ')[0])
 
 
 df['Numero'] = 1
@@ -516,7 +518,7 @@ pyo.plot(fig, filename = 'Contagios_Edad.html')
 Solo_Fallecidos = df[df['Ubicación del caso'] == 'Fallecido']
 
 
-Solo_Fallecidos ['Fecha de muerte f'] = Solo_Fallecidos['Fecha de muerte'].apply(lambda t: t.split('T')[0])
+Solo_Fallecidos ['Fecha de muerte f'] = Solo_Fallecidos['Fecha de muerte'].apply(lambda t: t.split(' ')[0])
 
 Sexo_fallecidos = Solo_Fallecidos.pivot_table(index='Sexo', values='Numero',aggfunc='count').reset_index()
 
@@ -557,7 +559,7 @@ fig.update_layout(
     bargroupgap=0.1 # gap between bars of the same location coordinate.
 )
 
-pyo.plot(fig, filename = 'Fallecidos_edad.html')
+#pyo.plot(fig, filename = 'Fallecidos_Sexo.html')
 
 
 
@@ -652,6 +654,7 @@ pyo.plot(fig, filename = 'Fecha_Contagio.html')
 
 ########################
 #### Fecha de sexo
+
 
 Fecha2 = df.groupby(['Fecha identificación', 'Sexo']).count().reset_index()
 Fecha2.sort_values('Fecha identificación', ascending=False)
