@@ -518,7 +518,7 @@ pyo.plot(fig, filename = 'Contagios_Edad.html')
 Solo_Fallecidos = df[df['Ubicación del caso'] == 'Fallecido']
 
 
-Solo_Fallecidos ['Fecha de muerte f'] = Solo_Fallecidos['Fecha de muerte'].apply(lambda t: t.split(' ')[0])
+#Solo_Fallecidos ['Fecha de muerte f'] = Solo_Fallecidos['Fecha de muerte'].apply(lambda t: t.split(' ')[0])
 
 Sexo_fallecidos = Solo_Fallecidos.pivot_table(index='Sexo', values='Numero',aggfunc='count').reset_index()
 
