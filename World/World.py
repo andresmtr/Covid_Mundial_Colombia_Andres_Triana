@@ -271,8 +271,11 @@ def figures_to_html(figs, filename="Tabla_contagiados_fallecidos.html"):
     dashboard.write("</body></html>" + "\n")
     
     
-Today = date.today()
-fecha2 = Today.strftime("%Y-%m-%d")
+#Today = date.today()
+#fecha2 = Today.strftime("%Y-%m-%d")
+
+yesterday = date.today()-timedelta(days=1)
+fecha2 = yesterday.strftime("%Y-%m-%d")
 
 otro = df['date'] == fecha2
 otro2 = df[otro]
