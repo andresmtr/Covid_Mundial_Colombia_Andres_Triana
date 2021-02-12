@@ -358,9 +358,9 @@ def figures_to_html(figs, filename="deaths_extreme_poverty.html"):
     dashboard.write("</body></html>" + "\n")
     
     
-fig1 = px.scatter(actual, x="extreme_poverty", y="total_deaths", color = "continent")
+#fig1 = px.scatter(actual, x="extreme_poverty", y="total_deaths", color = "continent")
 
-figures_to_html([fig1])
+#figures_to_html([fig1])
 
 
 
@@ -374,9 +374,9 @@ def figures_to_html(figs, filename="cardiovasc_death_rate.html"):
     dashboard.write("</body></html>" + "\n")
     
     
-fig1 = px.scatter(actual, x="cardiovasc_death_rate", y="total_deaths", color = "continent")
+#fig1 = px.scatter(actual, x="cardiovasc_death_rate", y="total_deaths", color = "continent")
 
-figures_to_html([fig1])
+#figures_to_html([fig1])
 
 
 def figures_to_html(figs, filename="diabetes_prevalence.html"):
@@ -388,9 +388,9 @@ def figures_to_html(figs, filename="diabetes_prevalence.html"):
     dashboard.write("</body></html>" + "\n")
     
     
-fig1 = px.scatter(actual, x="diabetes_prevalence", y="total_deaths", color = "continent")
+#fig1 = px.scatter(actual, x="diabetes_prevalence", y="total_deaths", color = "continent")
 
-figures_to_html([fig1])
+#figures_to_html([fig1])
 
 
 
