@@ -36,7 +36,7 @@ from dash.dependencies import Input, Output
 #####################################
 #Data
 
-df = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv')
 date_string = df['date']
 #date_object = date_string.strptime('%Y,-%m')
 #date_object = datetime.strptime(date_string, '%Y-%m')
